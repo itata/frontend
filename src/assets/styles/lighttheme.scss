@@ -1,0 +1,456 @@
+@import 'variables.light';
+@import '../../plugins/bootstrap/scss/variables';
+@import 'mixin';
+
+body.light_theme{
+    background: $body_bg;
+    color: $black;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        color: $black;
+    }
+
+    // .label {
+    //     border: solid 1px $border_color;
+    // }
+
+    .autocomplete{
+        .autocomplete_input{
+            background: $color-gray-2;
+            border-color: $heading_color;
+        }
+        input{
+            background: $color-gray-2;
+            color: $black;
+        }
+    }
+
+    .multiselect.dropdown-toggle.btn,
+    select.form-control:focus,
+    select.form-control{
+        background-color: $color-gray-2;
+        color: $black;
+        border-color: $color-gray-2;
+    }
+
+    .nav.nav-tabs{
+        &.high-light-nav{
+            background: repeating-linear-gradient(-45deg, rgba(27,27,25,.6), rgba(26,27,25,.6) 10px, rgba(35,35,33,.5) 10px, rgba(35,35,33,.5) 20px);
+        }
+        .nav-link{
+            color: $black;
+            font-weight: bold;
+            &.active{
+                border-width: 5px;
+                color: $heading_color;
+                &::after{
+                    height: 25px;
+                    background: linear-gradient(to top, rgba(254, 195, 57, 0.6), transparent);
+                }
+            }
+        }
+        &:not(.high-light-nav) {
+            .nav-link {
+                color: $highlight_color;
+                &.active{
+                    background: $color-gray-2;
+                }
+            }
+        }
+    }
+
+    .table {
+        .thead-highlight{
+            background: $color-gray-2;
+            color: $highlight_color_1;
+        }
+        .table-nested{
+            color: $black;
+            tr{
+                background: transparent !important;
+            }
+            .text-highlight{
+                color: $primary_color !important;
+            }
+        }
+        &.table-striped{
+            tr {
+                border-color: $color-gray-2;
+            }
+            tbody{
+                tr:nth-of-type(odd) {
+                    background: $color-gray-2;
+                }
+                tr:nth-of-type(even) {
+                    background: $color-gray-3;
+                }
+            }
+        }
+        &.table-hover tbody {
+            tr:hover {
+                background: none !important;
+            }
+        }
+        &.table-group{
+            tbody {
+                > tr:first-child {
+                    background: $border_color !important;
+                }
+                tr{
+                    background: $color-gray-3;
+                    border-color: $color-gray;
+                    color: $black;
+                }
+            }
+        }
+        &.table-correct-score{
+            tbody {
+                tr {
+                    &:hover {
+                        background: $color-gray-2 !important
+                    }
+                }
+            }
+            .bg-gray {
+                background: $color-gray-2 !important
+            }
+            .t-head{
+                background: $color-gray-2;
+                color: $black
+            }
+            .t-body{
+                color: $black;
+                .label.c-label {
+                    color: $heading_color
+                }
+                .item:nth-child(even) {
+                    background: $color-gray-2
+                }
+                .item:nth-child(odd) {
+                    background: $color-gray-3
+                }
+            }
+            .t-footer{
+                color: $black;
+            }
+        }
+        .goals{
+            color: $black !important;
+        }
+    }
+
+    .btn-reload:hover, .btn-reload:active, .btn-reload:focus {
+        border-color: $black;
+        color: $black;
+    }
+
+    .slot-machine{
+        .table{
+            &.table-hover {
+                tbody{
+                    tr:hover {
+                        background: $heading_color !important;
+                    }
+                }
+            }
+            .text-white {
+                color: $black !important;
+            }
+        }
+    }
+
+    .empty-list{
+        background: $color-gray-2 !important;
+    }
+
+    .light-border{
+        &:after{
+            background: linear-gradient(to top, rgba(254, 195, 57, .4), transparent);
+        }
+    }
+
+    .nav-tabs + .tab-content{
+        background: $color-gray-2;
+    }
+
+    .table{
+        &.table-g{
+            tbody {
+                tr{
+                    background: $color-gray-2;
+                    border-color: $color-gray-2;
+                }
+                .g-control{
+                    .close {
+                        .icon {
+                            
+                        }
+                    }
+                }
+            }
+        }
+        &.table-group{
+            color: $heading_color;
+            tbody{
+                >tr:first-child{
+                    background: linear-gradient(to top, rgba(0,0,0,.8), rgba(255,255,255,.4));
+                }
+            }
+        }
+    }
+
+    .match-listing {
+        a.label {
+            &:hover{
+                color: $black !important;
+            }
+        }
+        a.label.active{
+            box-shadow: 0 0 8px 3px $primary_color;
+            &:hover{
+                color: $heading_color !important;
+            }
+            &::after{
+                display: none;
+            }
+        }
+    }
+
+    .card.bet-card{
+        .card-header{
+            background: $border_color;
+            color: $heading_color;
+        }
+        .card-body{
+            background: $color-gray-3;
+            color: $black;
+            .label.c-label{
+                color: $heading_color;
+            }
+            .text-highlight{
+                color: $primary_color !important;
+            }
+        }
+    }
+
+    .card-footer, .card-body{
+        background: $color-gray-2;
+    }
+
+    .label {
+        &.c-label{
+            &.red-label {
+                background:$primary_color !important;
+            }
+            &.gray-label {
+                background: $card_header_bg_2 !important;
+            }
+            &:hover{
+                color: $black !important;
+                background: none !important;
+                &::after{
+                    background: linear-gradient(110deg, rgba(255,255,255,.5), rgba(197,39,40,.5))
+                }
+                &.red-label.n-hover {
+                    background:$primary_color !important;
+                }
+            }
+            &.active{
+                border: 1px solid $heading_color;
+                box-shadow: 0 0 8px 3px $primary_color;
+                &:hover{
+                    background: $primary_color !important;
+                }
+            }
+            &.n-hover{
+                &:hover {
+                    color: $heading_color !important
+                }
+            }
+        }
+    }
+
+    .static-bet-slip{
+        .match-of-dat{
+            .title{
+                color: $heading_color;
+                p{
+                    color: $heading_color;
+                }
+            }
+            .match-info{
+                .match{
+                    color: $heading_color;
+                    h4{
+                        color: $heading_color;
+                    }
+                }
+            }
+        }
+    }
+
+    .bet-slip-wrap{
+        color: $heading_color;
+        .heading{
+            background: $highlight_color_1;
+            .icon{
+                color: $highlight_color_1;
+                background-color: $heading_color;
+            }
+        }
+        .bet-body{
+            color: $black;
+            .bet-slip{
+                .card-footer{
+                    color: $black;
+                    .pre-footer{
+                        background: $border_color;
+                        .text-success{
+                            color: $black !important;
+                        }
+                    }
+                    .sg-stake{
+                        background: $border_color;
+                        border-bottom: 2px solid $color-gray-3;
+                        .form-group{
+                            border-left: 2px solid $color-gray-3;
+                            input{
+                                background: transparent;
+                                color: $highlight_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-default:not(.btn-bg){
+        background: $color-gray-3;
+    }
+
+    :not(textarea):not(.countries-dropdown).form-control{
+        background : $color-gray-3;
+        color: $black;
+    }
+
+    .block-footer{
+        .btn-default.text-highlight {
+            color: $heading_color !important;
+        }
+    }
+
+    .panel{
+        &.panel-gtn{
+            background: $color-gray-3;
+            color: $text_color;
+            .panel-body {
+                .panel-body.opened {
+                    .text-warning {
+                        color: $highlight_color !important;
+                    }
+                }
+                .text-warning {
+                    color: $black !important;
+                }
+            }
+            
+        }
+    }
+
+    .input-group{
+        .input-group-addon{
+            background: $color-gray-3;
+            color: $black;
+        }
+    }
+
+    .page-item.active .page-link, .page-item.disabled .page-link, .page-link{
+        color: $black;
+    }
+
+    .page-item.active .page-link{
+        color: $highlight_color;
+    }
+
+    .page-link:focus, .page-link:hover{
+        border-color: $border_color;
+    }
+
+    .overlay {
+        &:after{
+            background: rgba(0,0,0,.4);
+        }
+    }
+
+    .game-categories {
+        background: $color-gray;
+    }
+
+    .main_emplty{
+        background: $heading_color;
+        .nav-tabs.c-tab{
+            >li{
+                >.nav-link{
+                    color: $text_color;
+                }
+                >.nav-link.active {
+                    color: $black;
+                    background: transparent;
+                }
+            }
+        }
+        .banner{
+            .banner-info{
+                h3,h4 {
+                    color: $heading_color;
+                }
+            }
+        }
+        .card.c-card{
+            .card-header{
+                background: transparent;
+                color: $black;
+            }
+            .card-body{
+                background: $color-gray-2;
+            }
+        }
+        .top-wards{
+            .item{
+                border-color: $color-gray-3;
+                .amount{
+                    color: $black;
+                }
+            }
+        }
+        .table.c-table{
+            thead{
+                background: $color-gray-3;
+                color: $black;
+            }
+            &.table-striped{
+                tbody {
+                    tr:nth-of-type(odd){
+                        background: $color-gray;
+                    }
+                    tr:nth-of-type(even){
+                        background: $color-gray-2;
+                    }
+                }
+            }
+        }
+    }
+    
+}

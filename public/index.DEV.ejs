@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CryptoGp</title>
+    <base href="/">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!-- Vendor style -->
+    <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="public/vendor/toastr/toastr.min.css" />
+    <link rel="stylesheet" href="public/vendor/swiperjs/css/swiper.min.css" />
+    <link rel="stylesheet" href="public/vendor/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="public/vendor/styles/pe-icons/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="public/vendor/styles/pe-icons/helper.css" />
+    <link rel="stylesheet" href="public/vendor/styles/stroke-icons/style.css" />
+    <link rel="stylesheet" href="public/vendor/styles/cryptocoins/cryptocoins.css" />
+    <!-- BEGIN TRACKJS -->
+    <script type="text/javascript">
+        window._trackJs = {
+            token: 'c1ef2c86268441cea80570f1838d5d69'
+        };
+    </script>
+    <script type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js"></script>
+    <!-- END TRACKJS -->
+</head>
+
+<body class="pace-done">
+    <div id="app"></div>
+    <!-- Vendor scripts -->
+    <script src="public/vendor/jquery/jquery.min.js"></script>
+    <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="public/vendor/toastr/toastr.min.js"></script>
+    <script src="public/vendor/swiperjs/js/swiper.min.js"></script>
+    <!-- App scripts -->
+    <script src="app.js?v=<%= htmlWebpackPlugin.options.staticVersion %>"></script>
+</body>
+
+</html>

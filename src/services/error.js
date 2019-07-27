@@ -1,0 +1,43 @@
+export const ERROR_TYPE = {
+    un_authen: 'un_authen',
+    inactive_account: 'inactive_account',
+    account_not_existed: 'account_not_existed',
+    unauthorized: 'unauthorized',
+    email_already_verified: 'email_already_verified',
+    email_already_existed: 'email_already_existed',
+    email_invalid_format: 'email_invalid_format',
+    email_not_existed: 'email_not_existed',
+    invalid_captcha: 'invalid_captcha',
+    code_invalid: 'code_invalid',
+    code_generate_failed: 'code_generate_failed',
+    unsupported_country: 'unsupported_country',
+    forbidden_country: 'forbidden_country',
+    unknown: 'unknown',
+    code_expired: 'code_expired',
+    already_enabled_2fa: 'already_enabled_2fa',
+    invalid_2fa_code: 'invalid_2fa_code',
+    not_enabled_2fa: 'not_enabled_2fa',
+    two_fa_exceed_quota: '2fa_exceed_quota',
+    two_fa_expired: '2fa_expired'
+}
+
+export const ERROR_MSG = {
+    [ERROR_TYPE.un_authen]: 'Invalid email or password',
+    [ERROR_TYPE.inactive_account]: 'Your account is not actived',
+    [ERROR_TYPE.account_not_existed]: 'Account is not existed',
+    [ERROR_TYPE.unauthorized]: 'Permission denied',
+    [ERROR_TYPE.email_already_verified]: 'Your account had been verified',
+    [ERROR_TYPE.email_already_existed]: 'Email is already existed',
+    [ERROR_TYPE.email_invalid_format]: 'Invalid email address',
+    [ERROR_TYPE.email_not_existed]: 'Email is not existed',
+    [ERROR_TYPE.invalid_captcha]: 'Invalid captcha',
+    [ERROR_TYPE.code_invalid]: 'Verify Code is invalid',
+    [ERROR_TYPE.code_generate_failed]: 'Genegate verification code fail',
+    [ERROR_TYPE.unknown]: 'Unknown error',
+    [ERROR_TYPE.code_expired]: 'Verify code has been expired',
+    [ERROR_TYPE.already_enabled_2fa]: 'Your account is already enabled Google 2FA',
+    [ERROR_TYPE.invalid_2fa_code]: 'Invalid Google 2FA Code',
+    [ERROR_TYPE.not_enabled_2fa]: 'Your account is not enabled Google 2FA',
+    [ERROR_TYPE.two_fa_exceed_quota]: '2FA validate is exceed quota, please re-login with email/password and try again',
+    [ERROR_TYPE.two_fa_expired]: '2FA login session is expired or not existed, please re-login with email/password and try again'
+}

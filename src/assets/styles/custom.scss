@@ -1,0 +1,58 @@
+@import 'mixin';
+@import 'variables';
+
+// ----modal----
+.modal{
+    .modal-dialog{
+        color: $color-white;
+        .modal-header{
+            border: none;
+            .close{
+                color: $color-white
+            }
+        }
+        .modal-content{
+            background-color: $color-second;
+        }
+        .modal-footer{
+            border: none;
+        }
+        &.simple{
+            .modal-header{
+                padding: .5rem 1rem;
+            }
+        }
+    }
+}
+
+// ------start helper-------
+.break-word{
+    word-wrap: break-word;
+}
+
+.im-806-1800{
+    @include aspect-ratio(1800,806)
+}
+
+.w-45{
+    width: 45% !important;
+}
+
+.colorWhite{
+    color: $color-white;
+}
+
+.colorGray{
+    color: $color-gray;
+}
+
+.im-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.underline {
+    text-decoration: underline;
+}
+// --------end helper---------
